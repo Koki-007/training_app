@@ -1,0 +1,24 @@
+<div class="show-wrapper">
+  <div class="content-wrapper">
+    <div class="user_name">
+      <h2><%= link_to @post.user.name, user_path(@post.user.id) %></h2>
+    </div>
+    <div class="training-image">
+      <%= image_tag @post.img.url %>
+      <% if Like.find_by(user_id:@current_user.id, post_id:@post.id)%>
+        <%= link_to("/likes/#{@post.id}/destroy", {method: "post"}) do %>
+        <i class="fas fa-thumbs-up fa-2x fa-green"></i>
+        <%= Like.where(post_id: params[:id]).count%>
+        <% end %>
+      <% else %>
+        <%= link_to("/likes/#{@post.id}/create", {method: "post"}) do %>
+        <i class="far fa-thumbs-up fa-2x"></i>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="comment">
+      <h2><%= simple_format @post.content %></h2>
+    </div>
+  </div>
+
+</div>

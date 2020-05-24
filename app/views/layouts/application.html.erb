@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TrainingApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta charset="utf-8">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-logo">
+          <a href="/"><h2>トレーニングパッド</h2></a>
+        </div>
+        <div class="header-list">
+          <ul>
+            <% if session[:user_id] %>
+            <li><a><%= link_to @current_user.name, user_path(@current_user) %></a></li>
+            <li><a><%= link_to "ログアウト", logout_path, method: :post%></a></li>
+            <li><a><%= link_to "ユーザー一覧", users_path %></a></li>
+            <li><a><%= link_to "新規投稿", new_post_path %></a></li>
+            <li><a><%= link_to "トレーニング集", posts_path %></a></li>
+            <% else %>
+            <li><a><%= link_to "ログイン", login_path %></a></li>
+            <li><a><%= link_to "新規登録", new_user_path %></a></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <% if flash[:notice] %>
+    <div class="flash">
+      <%= flash[:notice] %>
+    </div>
+    <% end %>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>

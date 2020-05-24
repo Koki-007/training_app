@@ -1,0 +1,23 @@
+<div class="user_new-wrapper">
+  <h1>新規登録</h1>
+  <%= form_tag @user do %>
+  <div class="signup">
+    <p>ユーザー名</p>
+    <input name="name" value="<%= @user.name %>" >
+    <% if @user.errors.messages[:name].any? %>
+    <span class="error"><%= @user.errors.messages[:name][0]%></span>
+    <% end %>
+    <p>メールアドレス</p>
+    <input name="email" value="<%= @user.email %>" >
+    <% if @user.errors.messages[:email].any? %>
+    <span class="error"><%= @user.errors.messages[:email][0]%></span>
+    <% end %>
+  </div>
+  <p>パスワード</p>
+  <input type="password" name="password" value="<%= @user.password %>" >
+  <% if @user.errors.messages[:password].any? %>
+  <span class="error"><%= @user.errors.messages[:password][0]%></span>
+  <% end %>
+  <input type="submit">
+  <% end %>
+</div>

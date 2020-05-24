@@ -1,0 +1,21 @@
+<div class="user_show-wrapper">
+  <h1>ユーザー情報</h1>
+  <h3><%= @user.name %></h3>
+  <h3><%= @user.email %></h3>
+  <% if @user.id == @current_user.id %>
+    <%= link_to '[編集]',edit_user_path(@user) %>
+  <% end %>
+    <div class="user_post-wrapper">
+      <span class = "user_post_title">投稿一覧</span>
+      <% @user.posts.each do |post|  %>
+      <p><%= link_to post.training_type, post_path(post)%></p>
+      <% end %>
+    </div>
+    <div class="user_like-wrapper">
+      <span class="user_like_title">いいね一覧</span>
+      <% @likes.each do |like| %>
+        <% post = Post.find_by(id: like.post_id) %>
+        <p><%= link_to post.training_type, post_path(post)%></p>
+      <% end %>
+    </div>
+</div>

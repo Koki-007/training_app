@@ -1,0 +1,125 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// ------------------------- index.scss --------------------------
+.index-wrapper{
+  text-align: center;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #5d627b;
+  background: white;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+h2{
+  margin-bottom: 0;
+}
+.command{
+  font-size: 12px;
+}
+
+// ----------------------------- new.scss-------------------------------
+.user_new-wrapper{
+  text-align: center;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #5d627b;
+  background: white;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+.signup{
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.user_new-wrapper input{
+  width:200px;
+  height: 20px;
+  display: block;
+  margin: 0 auto;
+}
+.signup p{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.error{
+  font-size: 12px;
+  font-weight: bold;
+  color: tomato;
+}
+// ----------------------------- show.scss-------------------------------
+.user_show-wrapper{
+  text-align: center;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #5d627b;
+  background: white;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+  padding-bottom: 30px;
+}
+.user_post-wrapper {
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 3px;
+    color: #5d627b;
+    border-radius: 8px;
+}
+.user_post-wrapper .user_post_title {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 535px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    background: #FFF;
+    color: #5d627b;
+    font-weight: bold;
+}
+.user_post-wrapper p {
+    margin: 0;
+    padding: 0;
+}
+.user_like-wrapper {
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 3px;
+    color: #5d627b;
+    border-radius: 8px;
+}
+.user_like-wrapper .user_like_title {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 535px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    background: #FFF;
+    color: #5d627b;
+    font-weight: bold;
+}
+.user_like-wrapper p {
+    margin: 0;
+    padding: 0;
+}
+.fa-green:before
+{
+	color: #A4C639 ;
+}
+
+// ----------------------------- login_form.scss-------------------------------
+.login_form{
+  text-align: center;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #5d627b;
+  background: white;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+  padding-bottom: 30px;
+}

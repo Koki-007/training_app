@@ -1,0 +1,16 @@
+<div class="index-wrapper">
+  <h1>トレーニング集</h1>
+    <% @posts.each do |post|  %>
+      <h2><%= link_to post.user.name, user_path(post.user)  %></h2>
+      <h2><%= link_to post.training_type, post_path(post)  %></h2>
+      <% if post.user_id == @current_user.id %>
+      <%= link_to '[編集]',edit_post_path(post), class: 'command' %>
+      <%= link_to '[削除]',
+      post_path(post),
+      method: :delete,
+      class: 'command',
+      data: { confirm: '本当に削除しますか？'}
+      %>
+      <% end %>
+    <% end %>
+</div>

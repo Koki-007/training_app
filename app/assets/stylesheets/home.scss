@@ -1,0 +1,31 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.top-wrapper{
+  height: 800px;
+  background-image: url("/training.jpg");
+  background-size: cover;
+  text-align: center;
+}
+.top-wrapper h1{
+  color: #f0f8ff;
+  font-size: 120px;
+  opacity: 0.8;
+  letter-spacing: 10px;
+  padding-top: 50px;
+}
+.top-wrapper a{
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  background-color: rgba(197, 255, 188, 0.7);
+  border-radius: 10px;
+  line-height:100px;
+  color: white;
+  font-size: 20px;
+
+}
+.top-wrapper a:hover{
+  background-color: rgba(197, 255, 188, 0.8);
+  transition: all 1s;
+}

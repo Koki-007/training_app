@@ -1,0 +1,21 @@
+<%= form_for @post do |f| %>
+<div>
+  <%= f.select :training_type, [["バーベルトレーニング", "barbell"], ["ケトルベルトレーニング", "kettlebell"],  ["自重トレーニング", "selfweight"] ],  :prompt => "選択してください" %>
+  <% if @post.errors.messages[:training_type].any? %>
+  <span class="error"><%= @post.errors.messages[:training_type][0]%></span>
+  <% end %>
+</div>
+<div>
+  <%= f.text_area :content, placeholder: 'コメントを記入してください' %>
+  <% if @post.errors.messages[:content].any? %>
+  <span class="error"><%= @post.errors.messages[:content][0]%></span>
+  <% end %>
+</div>
+<div>
+  <%= f.file_field :img %>
+  <% if @post.errors.messages[:img].any? %>
+  <span class="error"><%= @post.errors.messages[:img][0]%></span>
+  <% end %>
+</div>
+<%= f.submit%>
+<% end %>

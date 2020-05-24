@@ -1,0 +1,77 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// ------------------ index.css ----------------------------
+.index-list{
+  text-align: center;
+}
+.index-wrapper{
+  text-align: center;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #5d627b;
+  background: white;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+h2{
+  margin-bottom: 0;
+}
+.command{
+  font-size: 12px;
+}
+
+
+// ---------------------new.scss------------------------------------
+.new-wrapper{
+  border-bottom: 1px solid #5d627b;;
+  text-align: center;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #5d627b;
+  background: white;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+  }
+select{
+  box-sizing: border-box;
+  width: 400px;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+textarea{
+  box-sizing: border-box;
+  width: 400px;
+  padding: 5px;
+  height: 160px;
+  margin-bottom: 15px;
+}
+.error{
+  font-size: 12px;
+  font-weight: bold;
+  color: tomato;
+}
+// ---------------------show.scss------------------------------
+.show-wrapper{
+  text-align: center;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #5d627b;
+  background: white;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+.comment{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    // color: #6091d3;/*文字色*/
+    background: #FFF;
+    border: solid 3px #5d627b;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+.comment h2{
+    margin: 0;
+    padding: 0;
+}
